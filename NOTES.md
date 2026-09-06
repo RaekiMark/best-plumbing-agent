@@ -30,7 +30,7 @@ A prompt which ask for an action timed out after 15 minutes, ending the run with
 The agent got confused and didn`t know if I were the customer or the owner. It even offered to search for a plumber instead of drafting a quote. I added a line that say pasted enquiries are forwarded customer messages. But on enquiry 4, the agent thinks that I am the one asking about my own bathroom. This means there are instructions that contradict each other.
 
 **10. Emergencies skipped flow**   
-If there is a burst pipe, it should have quoted `PIPE01 $280–600 and the $110 callout if it is after hours`. Instead the agent escalated without quoting. 
+The agent matched PIPE01 ($280–600) correctly, then deliberately withheld the quote, it decided that active flooding needed urgent fix, not price quotes. My skill listed burst pipe as an emergency urgency and separately kept a list of escalate without quoting cases that didn't include it. The agent merged both concepts. Technically it is not wrong, my spec left the emergency case undefined. That is why the model filled the gap with its own judgment. The same gap meant the enquiry never got logged, since logging is the last step of a flow it had already stopped/exited.
 
 **11. Only 2 of 5 enquiries logged**  
 Both logged rows are correct, it even includes a partial row with `unmatched` and empty prices rather than hallucinates the prices. But the enquiry for burst pipe didn`t get logged. Logging should be unconditional and not the last step.
