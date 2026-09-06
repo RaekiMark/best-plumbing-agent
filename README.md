@@ -12,6 +12,7 @@ Small businesses lose jobs due to slow enquiry responses. The owner are most lik
 With the rapid growth of tech, the obvious fix is to have an AI agent answer questions right away. But there are risks of the agents producing quotes with numbers that are made up. This could lead job loss and or low customer experience.
 
 This project is trying to fix the second problem.
+
 ---
 
 ## The core rule: prices are looked up, never generated
@@ -161,7 +162,7 @@ data/pricing.csv                 the price list — the only source of prices
 data/sample_enquiries.txt        five test cases
 logs/enquiries.csv               output log
 demo/                            screenshots from testing
-NOTES.md                         full build log, including everything that broke
+NOTES.md                         full build log, including everything that failed
 ```
 
 ---
