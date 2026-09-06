@@ -104,11 +104,11 @@ Burst pipe enquiry matched `PIPE01` at $280-600 correctly, but the agent stopped
 
 Technically it is a better decision than what I had specified, but it isn't what I wanted. The skill files treated urgency and quote or escalate as seperate concept, but the model merged them. 
 
-The failure meant the emergency never got logged.
+The failure meant the emergency never got logged since the logging is the step 8 of a flow that has been stopped and exited.
 
 ### Role confusion, and a fix that created a new bug
 
-The agent got confused and didn`t know if I were the customer or the owner. It even offered to search for a plumber instead of drafting a quote. I added a line that say pasted enquiries are forwarded customer messages. 
+The agent got confused and didn't know if I were the customer or the owner. It even offered to search for a plumber instead of drafting a quote. I added a line that say pasted enquiries are forwarded customer messages. 
 
 It then misfired the other way on an enquiry written in first person with no name
 or suburb:
@@ -139,6 +139,7 @@ The agent has host execution access, so scope was narrowed on purpose:
 
 - **No web search tool.** I did not give the agent web search since it could find a price online instead of my pricelist.
 - **macOS file permissions granted to Documents only.** The node requested access to iCloud, Apple Music and Photos during setup, which is not needed.
+- **No public channel connected.** I did not connect Telegram or similar apps. If I did, it would need a sender allowlist first, because the bot would be publicly findable by its username, and this agent can run commands on my machine.
 
 ---
 
