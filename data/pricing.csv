@@ -1,0 +1,15 @@
+code,job_name,min_price,max_price,typical_hours,notes
+CALL01,Standard callout fee,50,50,0,Waived if job proceeds same visit
+CALL02,After work hours callout,110,110,0,Outside 7am-5pm weekdays and all weekend
+DRIN01,Blocked drain,100,200,1.5,Machine clean only
+DRIN02,Blocked drain with broken parts,300,850,3,Requires site inspection first
+HTWR01,"Hot water repair, element or thermostat",220,450,2,Parts included
+HTWR02,Hot water replacement,1400,2200,4,Includes removal of old unit
+HTWR03,Hot water replacement - gas continuous,1900,2900,5,Gas compliance certificate extra
+PIPE01,Burst pipe repair,280,600,2.5,Under slab work quoted separately
+TAPS01,Leaking tap repair,120,180,0.5,Per tap
+TAPS02,Tap replacement supply and install,180,320,1,Per tap
+TOIL01,Toilet cistern repair,180,350,1.5,
+TOIL02,Toilet replacement,650,1100,3,Includes disposal of unit
+DISH01,Dishwasher installation,180,280,1,Existing connections only
+GASS01,Gas compliance certificate,150,150,0,Mandatory on all gas work
